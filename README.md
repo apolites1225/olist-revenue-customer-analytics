@@ -1,4 +1,4 @@
-# E-Commerce Revenue & Customer Analysis Dashboard
+# Olist - E-Commerce Revenue & Customer Analysis Dashboard
 
 ## Overview
 
