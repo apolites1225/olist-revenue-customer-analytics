@@ -1,4 +1,4 @@
-# Olist — Revenue & Customer Analytics
+# Olist — Revenue & Customer Analysis
 
 ## Executive Summary
 
