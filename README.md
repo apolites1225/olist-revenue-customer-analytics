@@ -1,109 +1,103 @@
-# Olist — Revenue & Customer Analytics Dashboard
+# Olist — Revenue & Customer Analytics
 
-## Overview
+## Executive Summary
 
-This project analyzes e-commerce performance using SQL and Power BI, with a focus on understanding customer behavior, revenue distribution, and growth drivers.
+This project analyzes e-commerce performance for Olist, a Brazilian marketplace, using SQL and Power BI. The analysis covers $15.4M in delivered orders across all Brazilian states, with a focus on identifying revenue drivers, concentration risk, and customer retention patterns.
 
-The goal was to identify **what drives revenue**, **where it is concentrated**, and **how customer purchasing patterns impact overall business performance**.
+Three material findings emerged:
 
----
-
-## Tools Used
-
-* SQL (PostgreSQL / DBeaver)
-* Power BI (Data modeling & visualization)
-* DAX (calculated measures and KPIs)
+- Revenue is geographically concentrated, with São Paulo accounting for 37.4% of total revenue — representing meaningful regional dependency risk.
+- Repeat customers are a small but disproportionately valuable segment, representing ~3% of customers but generating ~5.6% of total revenue.
+- Revenue growth is driven primarily by order volume, not by increases in average order value — suggesting acquisition is outpacing monetization efficiency.
 
 ---
 
-## Data Preparation
+## Business Questions
 
-* Joined multiple datasets (customers, orders, order_items, payments) to create a unified analytical model
-* Filtered to **delivered orders only** to ensure accurate revenue reporting
-* Aggregated payment data at the order level to avoid duplication
-* Created structured views for:
-
-  * Customer revenue
-  * Product performance
-  * Yearly revenue trends
-
----
-## Technical Highlights
-
-- Built multi-table joins across customers, orders, and payments to create a unified analytical dataset  
-- Prevented revenue duplication by aggregating payment data at the order level  
-- Filtered to delivered orders to ensure accurate revenue reporting  
-- Created DAX measures for KPIs and dynamic dashboard interactivity  
-
----
-## Key Insights
-
-### Customer Behavior
-
-* Repeat customers represent ~3% of customers but generate ~5.6% of total revenue
-* Suggests opportunity for retention strategies and loyalty programs
-
-### Geographic Revenue Distribution
-
-* Revenue is highly concentrated in São Paulo (~37% of total revenue)
-* Highlights regional dependency and potential geographic risk
-* Opportunity to expand into underperforming regions
-
-### Revenue Trends
-
-* Revenue growth is primarily driven by increased order volume
-* Average revenue per order remains relatively stable
-* Suggests growth is coming from acquisition rather than increased customer spend
-  
----
-## Business Recommendations
-
-- Invest in retention strategies to increase repeat customer contribution  
-- Expand operations and marketing in underrepresented regions to reduce geographic concentration risk  
-- Explore pricing or bundling strategies to increase average order value  
----
-
-## Dashboard Features
-
-* KPI cards for total revenue, total orders, and customers
-* Customer segmentation (single vs repeat buyers)
-* Geographic visualization of revenue by state
-* Time-series analysis of revenue and order volume
-* Interactive filters for dynamic exploration
+1. What is the total revenue and order volume across the analysis period?
+2. Which states generate the most revenue, and how concentrated is geographic distribution?
+3. What share of customers are repeat buyers, and how does their revenue contribution compare to one-time buyers?
+4. Is revenue growth driven by more orders or by higher spend per order?
+5. Where are the greatest opportunities to improve retention and reduce concentration risk?
 
 ---
 
-## Dashboard Preview
+## Data Sources
 
-### Customer Behavior
+| Dataset | Description |
+|---|---|
+| orders | Order status, timestamps, and customer IDs |
+| order_items | Product-level line items and pricing |
+| payments | Payment values aggregated at the order level |
+| customers | Customer location and unique identifiers |
 
-<img src="images/customer_page.png" width="800"/>
-
----
-
-### Geographic Revenue
-
-<img src="images/geography_page.png" width="800"/>
-
----
-
-### Revenue Trends
-
-<img src="images/trends_page.png" width="800"/>
+Data was filtered to delivered orders only to ensure accurate revenue reporting. Payment data was aggregated at the order level to prevent duplication from multi-payment orders.
 
 ---
 
-## Files Included
+## Tools & Skills Used
 
-* Power BI dashboard (.pbix)
-* SQL queries used for analysis
-* Dashboard screenshots
+- **SQL (PostgreSQL / DBeaver):** Multi-table joins, aggregation, revenue segmentation, retention analysis
+- **Power BI:** Data modeling, DAX measures, KPI cards, geographic visualization, interactive filtering
+- **DAX:** Calculated measures for KPIs and dynamic dashboard interactivity
 
 ---
 
-## What I Learned
+## Key Findings
 
-* How to structure raw transactional data into an analytical model
-* Importance of filtering and data validation (e.g., excluding canceled orders)
-* How to translate business questions into SQL queries and dashboard visuals
-* Designing dashboards that communicate insights clearly and effectively
+**Geographic Concentration**
+São Paulo (SP) accounts for 37.4% of total revenue ($5.77M of $15.42M). The top 3 states — SP, RJ, and MG — together represent over 55% of total revenue, indicating significant regional dependency.
+
+**Customer Retention**
+Repeat customers account for approximately 3% of the customer base but generate ~5.6% of total revenue. Their average order value is meaningfully higher than one-time buyers, suggesting strong lifetime value potential if retention improves.
+
+**Revenue Growth Drivers**
+Revenue growth over the analysis period is driven primarily by increased order volume rather than higher average order value. Average revenue per order remained relatively stable, indicating that growth is coming from customer acquisition rather than increased spend per customer.
+
+---
+
+## Key Business Recommendations
+
+| Priority | Recommendation |
+|---|---|
+| 🌎 Reduce geographic risk | Invest in marketing and logistics expansion in underperforming states to reduce dependence on São Paulo |
+| 🔁 Improve retention | Implement loyalty programs or targeted re-engagement campaigns for one-time buyers — even modest improvement in repeat rate has outsized revenue impact |
+| 📈 Increase order value | Explore bundling, upsell, and cross-sell strategies to raise average order value alongside volume growth |
+
+---
+
+## Data Cleaning, Assumptions & Limitations
+
+- Analysis is restricted to orders with status = 'delivered' to exclude canceled, unavailable, and in-transit orders from revenue figures.
+- Payment values were aggregated at the order level before joining to prevent row duplication from installment or multi-method payments.
+- Customer identity is based on unique customer IDs; the dataset does not support cross-order customer matching beyond the provided identifier.
+- Analysis does not include margin, cost-of-goods, or seller fee data — all revenue figures reflect gross payment values.
+
+---
+
+## Project Structure
+
+```
+olist-revenue-customer-analytics/
+├── sql/
+│   ├── customer_revenue.sql       # Customer segmentation and repeat buyer analysis
+│   ├── monthly_revenue.sql        # Revenue and order volume trends over time
+│   └── revenue_by_state.sql       # Geographic revenue concentration analysis
+├── powerbi/                       # Power BI dashboard (.pbix)
+├── images/                        # Dashboard screenshots
+└── README.md
+```
+
+### Dashboard Preview
+
+**Customer Behavior**
+
+![Customer Behavior](images/customer_behavior.png)
+
+**Geographic Revenue**
+
+![Geographic Revenue](images/geographic_revenue.png)
+
+**Revenue Trends**
+
+![Revenue Trends](images/revenue_trends.png)
