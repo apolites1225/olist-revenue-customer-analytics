@@ -48,11 +48,18 @@ Data was filtered to delivered orders only to ensure accurate revenue reporting.
 **Geographic Concentration**
 São Paulo (SP) accounts for 37.4% of total revenue ($5.77M of $15.42M). The top 3 states — SP, RJ, and MG — together represent over 55% of total revenue, indicating significant regional dependency.
 
+![Geographic Revenue](images/geography_page.png)
+
+
 **Customer Retention**
 Repeat customers account for approximately 3% of the customer base but generate ~5.6% of total revenue. Their average order value is meaningfully higher than one-time buyers, suggesting strong lifetime value potential if retention improves.
 
+![Customer Behavior](images/customer_page.png)
+
 **Revenue Growth Drivers**
 Revenue growth over the analysis period is driven primarily by increased order volume rather than higher average order value. Average revenue per order remained relatively stable, indicating that growth is coming from customer acquisition rather than increased spend per customer.
+
+![Revenue Trends](images/trends_page.png)
 
 ---
 
@@ -88,16 +95,3 @@ olist-revenue-customer-analytics/
 └── README.md
 ```
 
-### Dashboard Preview
-
-**Customer Behavior**
-
-![Customer Behavior](images/customer_page.png)
-
-**Geographic Revenue**
-
-![Geographic Revenue](images/geography_page.png)
-
-**Revenue Trends**
-
-![Revenue Trends](images/trends_page.png)
