@@ -1,5 +1,7 @@
 # Olist — Revenue & Customer Analysis
 
+![Olist Revenue Dashboard](images/geography_page.png)
+
 ## Executive Summary
 
 This project analyzes e-commerce performance for Olist, a Brazilian marketplace, using SQL and Power BI. The analysis covers $15.4M in delivered orders across all Brazilian states, with a focus on identifying revenue drivers, concentration risk, and customer retention patterns.
