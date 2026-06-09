@@ -92,12 +92,12 @@ olist-revenue-customer-analytics/
 
 **Customer Behavior**
 
-![Customer Behavior](images/customer_behavior.png)
+![Customer Behavior](images/customer_page.png)
 
 **Geographic Revenue**
 
-![Geographic Revenue](images/geographic_revenue.png)
+![Geographic Revenue](images/geography_page.png)
 
 **Revenue Trends**
 
-![Revenue Trends](images/revenue_trends.png)
+![Revenue Trends](images/trends_page.png)
