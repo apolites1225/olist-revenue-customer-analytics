@@ -74,11 +74,9 @@ Revenue growth over the analysis period is driven primarily by increased order v
 
 ## Key Business Recommendations
 
-| Priority | Recommendation |
-|---|---|
-| 🌎 Reduce geographic risk | Invest in marketing and logistics expansion in underperforming states to reduce dependence on São Paulo |
-| 🔁 Improve retention | Implement loyalty programs or targeted re-engagement campaigns for one-time buyers — even modest improvement in repeat rate has outsized revenue impact |
-| 📈 Increase order value | Explore bundling, upsell, and cross-sell strategies to raise average order value alongside volume growth |
+- **Reduce geographic risk:** Invest in marketing and logistics expansion in underperforming states to reduce dependence on São Paulo
+- **Improve retention:** Implement loyalty programs or targeted re-engagement campaigns for one-time buyers — even modest improvement in repeat rate has outsized revenue impact
+- **Increase order value:** Explore bundling, upsell, and cross-sell strategies to raise average order value alongside volume growth
 
 ---
 
